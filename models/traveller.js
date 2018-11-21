@@ -9,13 +9,16 @@ Traveller.prototype.getJourneyStartLocations = function() {
 };
 
 Traveller.prototype.getJourneyEndLocations = function () {
-  const startLocations = [];
-  this.journeys.map((journey) => startLocations.push(journey.endLocation));
-  return startLocations;
+  const endLocations = [];
+  this.journeys.map((journey) => endLocations.push(journey.endLocation));
+  return endLocations;
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
-
+  const journeys = this.journeys.filter((journey) => {
+    return journey.transport === transport;
+  });
+  return journeys;
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {

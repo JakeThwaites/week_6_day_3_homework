@@ -50,7 +50,7 @@ it('should be able to get the journeys start locations', function() {
     assert.deepStrictEqual(traveller.getJourneyEndLocations(), expected);
   });
 
-  xit('should be able to get journeys by transport', function() {
+  it('should be able to get journeys by transport', function() {
     const expected = [
       journey1,
       journey2

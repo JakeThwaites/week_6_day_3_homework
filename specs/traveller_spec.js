@@ -66,7 +66,7 @@ it('should be able to get the journeys start locations', function() {
     assert.deepStrictEqual(traveller.getJourneysByMinDistance(1000), expected)
   });
 
-  xit('should be able to calculate total distance travelled', function() {
+  it('should be able to calculate total distance travelled', function() {
     assert.deepStrictEqual(traveller.calculateTotalDistanceTravelled(), 11710);
   });
 
